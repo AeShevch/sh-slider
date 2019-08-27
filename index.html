@@ -1,0 +1,384 @@
+<!-- Бандл из animate.scss и style.scss (gulpfile.js function scss()) -->
+<link rel="stylesheet" href="css/bundle.css">
+<!-- Стили, которые должны быть вынесены в настройки,
+    если в настройках не указано, то используем значения ниже -->
+<style>
+    /* Заголовок */
+    .mg-slide__title {
+        /* Размер шрифта */
+        font-size: 60px;
+        /* Цвет */
+        color: #fff;
+    }
+
+    /* Текст */
+    .mg-slide__text-content {
+        /* Размер шрифта */
+        font-size: 18px;
+        /* Цвет */
+        color: #fff;
+    }
+
+    /* Кнопка */
+    .mg-slide__btn {
+        /* Фон кнопки */
+        background-color: #f05a4f;
+        /* Цвет шрифта кнопки  */
+        color: #fff;
+        /* Размер шрифта кнопки */
+        font-size: 18px;
+    }
+    /* Цвет фона кнопки при наведении и фокусе */
+    .mg-slide__btn:focus,
+    .mg-slide__btn:hover {
+        background-color: #ff493c;
+    }
+
+    /* Высота слайдера
+     Должен быть чекбокс «На всю высоту экрана», которое будет подставлять значенее высоты 100vh
+     */
+    .mg-slider {
+        height: 700px;
+    }
+
+    /* Мобильные стили */
+
+    /* Телефоны */
+    @media (min-width: 576px) {
+        /* Высота слайдера
+         Должен быть чекбокс «На всю высоту экрана», которое будет подставлять значенее высоты 100vh
+         */
+        .mg-slider {
+            height: 700px;
+        }
+
+        /* Заголовок */
+        .mg-slide__title {
+            /* Размер шрифта */
+            font-size: 60px;
+        }
+
+        /* Текст */
+        .mg-slide__text-content {
+            /* Размер шрифта */
+            font-size: 18px;
+        }
+
+        /* Кнопка */
+        .mg-slide__btn {
+            /* Размер шрифта кнопки */
+            font-size: 18px;
+        }
+    }
+    /* Планшеты */
+    @media (min-width: 768px) {
+        /* Высота слайдера
+         Должен быть чекбокс «На всю высоту экрана», которое будет подставлять значенее высоты 100vh
+         */
+        .mg-slider {
+            height: 700px;
+        }
+
+        /* Заголовок */
+        .mg-slide__title {
+            /* Размер шрифта */
+            font-size: 60px;
+        }
+
+        /* Текст */
+        .mg-slide__text-content {
+            /* Размер шрифта */
+            font-size: 18px;
+        }
+
+        /* Кнопка */
+        .mg-slide__btn {
+            /* Размер шрифта кнопки */
+            font-size: 18px;
+        }
+    }
+    /* Маленький десктопы */
+    @media (min-width: 992px) {
+        /* Высота слайдера
+         Должен быть чекбокс «На всю высоту экрана», которое будет подставлять значенее высоты 100vh
+         */
+        .mg-slider {
+            height: 700px;
+        }
+        /* Заголовок */
+        .mg-slide__title {
+            /* Размер шрифта */
+            font-size: 60px;
+        }
+
+        /* Текст */
+        .mg-slide__text-content {
+            /* Размер шрифта */
+            font-size: 18px;
+        }
+
+        /* Кнопка */
+        .mg-slide__btn {
+            /* Размер шрифта кнопки */
+            font-size: 18px;
+        }
+    }
+    /* Большие десктопы */
+    @media (min-width: 1200px) {
+        /* Высота слайдера
+         Должен быть чекбокс «На всю высоту экрана», которое будет подставлять значенее высоты 100vh
+         */
+        .mg-slider {
+            height: 700px;
+        }
+        /* Заголовок */
+        .mg-slide__title {
+            /* Размер шрифта */
+            font-size: 60px;
+        }
+
+        /* Текст */
+        .mg-slide__text-content {
+            /* Размер шрифта */
+            font-size: 18px;
+        }
+
+        /* Кнопка */
+        .mg-slide__btn {
+            /* Размер шрифта кнопки */
+            font-size: 18px;
+        }
+    }
+
+</style>
+
+<!-- Основной контейнер слайдера -->
+<section class="mg-slider swiper-container">
+    <!-- Обязательный внутренний контейнер -->
+    <div class="swiper-wrapper mg-slider__slides">
+        <!-- Слайды -->
+        <div class="swiper-slide mg-slider__slide mg-slide"
+             style="background-image: url('img/slide-1.png')">
+            <div class="mg-slide__inner"
+                 data-swiper-animation="zoomIn"
+                 data-duration=".3s"
+                 data-swiper-out-animation="hinge"
+                 data-out-duration=".2s">
+
+                <h2 class="mg-slide__title"
+                    data-swiper-animation="tada"
+                    data-duration=".5s"
+                    data-delay="1s"
+                    data-swiper-out-animation="fadeOut"
+                    data-out-duration=".2s">
+                    Впечатляющий заголовок интернет-магазина
+                </h2>
+
+                <p class="mg-slide__text-content"
+                   data-swiper-animation="slideInLeft"
+                   data-duration=".5s"
+                   data-delay="1s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cumque
+                    dolores earum inventore libero nemo nobis perferendis, recusandae
+                </p>
+
+                <a href="#"
+                   class="mg-slide__btn js-animate-btn"
+                   data-swiper-animation="jackInTheBox"
+                   data-duration=".5s"
+                   data-delay="1s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Купить
+                </a>
+            </div>
+        </div>
+        <div class="swiper-slide mg-slider__slide mg-slide mg-slide_position_center"
+             style="background-image: url('img/slide-1.png')">
+            <div class="mg-slide__inner"
+                 data-swiper-animation="zoomIn"
+                 data-duration=".3s"
+                 data-swiper-out-animation="fadeOut"
+                 data-out-duration=".2s">
+
+                <h2 class="mg-slide__title"
+                    data-swiper-animation="zoomInLeft"
+                    data-duration=".5s"
+                    data-delay=".5s"
+                    data-swiper-out-animation="fadeOut"
+                    data-out-duration=".2s">
+                    Впечатляющий заголовок интернет-магазина
+                </h2>
+
+                <p class="mg-slide__text-content"
+                   data-swiper-animation="rotateIn"
+                   data-duration=".5s"
+                   data-delay=".5s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cumque
+                    dolores earum inventore libero nemo nobis perferendis, recusandae
+                </p>
+
+                <a href="#"
+                   class="mg-slide__btn"
+                   data-swiper-animation="bounceIn"
+                   data-duration=".5s"
+                   data-delay=".5s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Купить
+                </a>
+            </div>
+        </div>
+        <div class="swiper-slide mg-slider__slide mg-slide mg-slide_position_right"
+             style="background-image: url('img/slide-1.png')">
+            <div class="mg-slide__inner"
+                 data-swiper-animation="zoomIn"
+                 data-duration=".1s"
+                 data-swiper-out-animation="fadeOut"
+                 data-out-duration=".2s">
+
+                <h2 class="mg-slide__title"
+                    data-swiper-animation="fadeIn"
+                    data-duration=".5s"
+                    data-delay=".5s"
+                    data-swiper-out-animation="fadeOut"
+                    data-out-duration=".2s">
+                    Впечатляющий заголовок интернет-магазина
+                </h2>
+
+                <p class="mg-slide__text-content"
+                   data-swiper-animation="fadeIn"
+                   data-duration=".5s"
+                   data-delay=".5s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cumque
+                    dolores earum inventore libero nemo nobis perferendis, recusandae
+                </p>
+
+                <a href="#"
+                   class="mg-slide__btn"
+                   data-swiper-animation="fadeIn"
+                   data-duration=".5s"
+                   data-delay="1s"
+                   data-swiper-out-animation="fadeOut"
+                   data-out-duration=".2s">
+                    Купить
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Если включена пагинация-->
+    <div class="swiper-pagination"></div>
+
+    <!-- Если включены кнопки перелистывания -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Если включен скроллбар -->
+    <div class="swiper-scrollbar"></div>
+</section>
+
+<!-- Бандл Swiper.js и Swiper-animation.js, которые берутся из node_modules
+(Настраивается в gulpfile.js function js()) -->
+<script src="js/bundle.js"></script>
+
+<!-- Опции слайдера Swiper.js-->
+<script>
+    var swiperAnimation = new SwiperAnimation(),
+        swiper = new Swiper(".swiper-container", {
+
+        // Направление переключение слайдов
+        direction: "horizontal",
+        // direction: "vertical",
+
+        // Скорость переключения слайдов в мс
+        speed: 300,
+
+        // Размер, лучше не использовать, сломает адаптивность
+        // width: '',
+        // height: '',
+
+        // Автопереключение слайдов
+        autoplay: {
+            // Скорость
+            delay: 2500,
+            // Отключать автопереключение при взаимодействие со слайдером
+            disableOnInteraction: true,
+        },
+
+
+        // Эффекты переключения слайдов
+        // effect: "slide",
+        // effect: 'cube',
+        // effect: 'flip',
+        // effect: "fade",
+
+        // effect: 'coverflow',
+        // centeredSlides: true,
+        // slidesPerView: 'auto',
+        // coverflowEffect: {
+        //     rotate: 50,
+        //     stretch: 0,
+        //     depth: 100,
+        //     modifier: 1,
+        //     slideShadows : true,
+        // },
+
+        // Переключение слайдов с клавиатуры
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true
+        },
+
+        // Переключение слайда колёсиком
+        mousewheel: {
+            eventsTarged: ".swiper-slide",
+            sensitivity: 5
+        },
+
+        // Зацикливание слайдов
+        loop: true,
+
+        // Параллакс
+        parallax: true,
+
+        // Автовысота в зависимости от высоты слайда
+        // autoHeight: true,
+
+        // Скроллбар снизу
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true
+        },
+
+        // Пагинация
+        pagination: {
+            el: '.swiper-pagination',
+            // Тип пагинации
+            type: 'progressbar',
+            // type: 'bullets',
+        },
+
+        // Стрелки вперёд-назад
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        on: {
+            init: function () {
+                swiperAnimation.init(this).animate();
+            },
+            slideChange: function () {
+                swiperAnimation.init(this).animate();
+            }
+        }
+    });
+</script>

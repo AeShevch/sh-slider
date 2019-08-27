@@ -1,0 +1,91 @@
+// TODO Удалить перед отправкой на прод
+body {
+    margin: 0;
+    font-family: Lato, sans-serif;
+}
+//
+
+$textColor: #fff;
+
+
+.mg-slider {
+    width: 100%;
+    max-width: 100%;
+    font-size: 60px;
+
+    // Оптимизация шрифтов
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.mg-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    &_position {
+        &_center {
+            justify-content: center;
+            text-align: center;
+
+            .mg-slide__btn {
+                align-self: center;
+            }
+        }
+        &_right {
+            justify-content: flex-end;
+            text-align: right;
+
+            .mg-slide__btn {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 730px;
+        margin: 0 .5em;
+    }
+
+    &__title {
+        font-size: 1em;
+        color: $textColor;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 .1em;
+    }
+
+    &__text-content {
+        font-size: .3em;
+        line-height: 1.4;
+        color: $textColor;
+        margin: 1em 0;
+    }
+
+    &__btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 80px;
+        padding: 1em 3em;
+        background-color: #f05a4f;
+        outline: 0;
+        cursor: pointer;
+        line-height: 1;
+        transition: all 350ms ease;
+        margin-top: 2em;
+        text-decoration: none;
+    }
+}
