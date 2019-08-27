@@ -37,7 +37,6 @@ function js() {
         [
         'node_modules/swiper/dist/js/swiper.min.js',
         'node_modules/swiper-animation/build/swiper-animation.min.js',
-        'src/script.js'
         ])
         .pipe(plumber())
         .pipe(babel())
